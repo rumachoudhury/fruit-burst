@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Fruit Burst</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <script src="https://kit.fontawesome.com/0c4692b417.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+   <!-- this link for favicon.ico(logo icon) and I only changed the image file path-->
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/project.css" />
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+    <!-- large screen navbar start -->
+    <!-- Use any of the d-*-none classes to control WHEN the element should be hidden on a specific screen width -->
+
+    <div class="d-none d-md-block">
+      <!-- container" class sets a fixed width for the content -->
+      <!-- When we use the “container” class it gets 1300px automatically. -->
+      <nav class="navbar navbar-light container my-4 rounded-pill px-3" style="background-color: #f85559">
+        <div class="">
+          <a class="navbar-brand text-white fw-bold" href="#">Home</a>
+          <a class="navbar-brand text-white fw-bold" href="#">About</a>
+          <a class="navbar-brand text-white fw-bold" href="#">Shop</a>
+          <a class="navbar-brand text-white fw-bold" href="#">All fruits</a>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <img src="./images/logo.png" alt="" />
+          <a class="fs-4 fw-bold text-decoration-none text-white" href="">Fruit Burst</a>
+        </div>
+       
+        <!-- I used position-relative here -->
+        <div class="position-relative">
+          <input class="form-control me-2" type="search" placeholder="Type here" aria-label="Search" />
+          <i class="fa-solid fa-magnifying-glass position-absolute" style="top: 40%; right: 5%"></i>
+          <!-- here I used position-absolute -->
+        </div>
+      </nav>
+    </div>
+    <!-- Large screen navbar end -->
+    <!-- small screen navbar start -->
+    <nav class="navbar navbar-light d-lg-none" style="background-color: #f85559">
+      <div class="">
+        <img src="./images/logo.png" alt="" />
+        <a class="fs-4 fw-bold text-decoration-none text-white" href="">Fruit Burst</a>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle bg-transparent border-0" type="button" id="dropdownMenuButton1"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Home</a></li>
+          <li><a class="dropdown-item" href="#">About</a></li>
+          <li><a class="dropdown-item" href="#">Shop</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- small screen navbar end -->
+  </header>
+  <main>
+    <!-- Banner section start -->
+    <!-- Slider start -->
+    <div id="carouselExampleControls" class="carousel slide container position-relative" data-bs-ride="carousel">
+      <!-- here I used position-relative  -->
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="height: 75vh">
+          <img src="./images/banner1.png" class="d-block w-100 h-100" alt="..." />
+        </div>
+        <div class="carousel-item" style="height: 75vh">
+          <img src="./images/banner2.png" class="d-block w-100 h-100" alt="..." />
+        </div>
+        <div class="carousel-item" style="height: 75vh">
+          <img src="./images/banner3.png" class="d-block w-100 h-100" alt="..." />
+        </div>
+        <div class="carousel-item" style="height: 75vh">
+          <img src="./images/banner4.png" class="d-block w-100 h-100" alt="..." />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <div class="position-absolute bg-black bg-opacity-25 h-100 banner-title"></div>
+      <!-- here I used position-absolute -->
+      <div class="position-absolute text-center title-heading">
+        <h1 class="text-white fw-bold">
+          Exotic tastes at your <br />
+          doorstep
+        </h1>
+        <p class="text-white">We supply highly quality organic products</p>
+        <button type="button" class="btn text-white fw-bold" style="background-color: #f85559">
+          Shop now
+        </button>
+      </div>
+
+      <!-- position-absolute here -->
+      <div class="position-absolute d-none d-md-flex justify-content-center align-items-center bg-white rounded-2"
+        style="left: 18%; bottom: -15%">
+        <div class="p-3"><img src="./images/fruit1.png" alt="" /></div>
+        <div class="p-3"><img src="./images/fruit2.png" alt="" /></div>
+        <div class="p-3"><img src="./images/fruit3.png" alt="" /></div>
+        <div class="p-3"><img src="./images/fruit4.png" alt="" /></div>
+        <div class="p-3"><img src="./images/fruit5.png" alt="" /></div>
+      </div>
+    </div>
+
+    <!-- Slider end -->
+    <!-- Banner section end -->
+
+    <!-- Deal of the day section start -->
+    <div class="container d-md-flex justify-content-between align-items-center mb-3" style="margin-top: 120px">
+      <div class="text-lg-start text-center">
+        <h1>Deal of the day</h1>
+        <p>
+          Contrary to popular belief, is not simply random text. It has roots
+          in a piece of <br />
+          classical Latin literature from 45 BC, making it over 2000 years
+          old.
+        </p>
+      </div>
+      <div class="d-flex justify-content-center align-items-center gap-3">
+        <div class="text-center">
+          <p class="fs-1 fw-bold">15</p>
+          <p>Days</p>
+        </div>
+        <div class="fs-3" style="margin-bottom: 55px;">&#8942</div>
+        <div class="text-center">
+          <p class="fs-1 fw-bold">14</p>
+          <p>Hours</p>
+        </div>
+        <div class="fs-3" style="margin-bottom: 55px;">&#8942</div>
+        <div class="text-center">
+          <p class="fs-1 fw-bold">12</p>
+          <p>Hours</p>
+        </div>
+        <div class="fs-3" style="margin-bottom: 55px;">&#8942</div>
+        <div class="text-center">
+          <p class="fs-1 fw-bold">11</p>
+          <p>Sec</p>
+        </div>
+      </div>
+    </div>
+    <!-- Deal of the day section end -->
+    <!-- Card section start -->
+
+    <div class="container my-5">
+      <div class="row gap-3 row-cols-1 row-cols-md-4 justify-content-center">
+        <!-- card 1-->
+        <div class="card col shadow w-auto ">
+          <img src="./images/fruit6.png" class="card-img-top w-50 mx-auto p-3 my-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center my-2 fw-bold fs-3">10.50$ - 18.90$</h5>
+            <p class="card-text text-center">Apple</p>
+            <div class="my-4 text-center">
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3"></span>
+              <span class="fa fa-star fs-3"></span>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn text-uppercase btn-light w-100 mx-auto" style="color: #f85559;"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Details
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header flex-column">
+                    <div>
+                      <img src="./images/fruit6.png" class="card-img-top" alt="...">
+                    </div>
+                    <h5 class="modal-title" id="exampleModalLabel">Apple</h5>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis qui tenetur
+                      inventore.</p>
+                    <div class="d-flex justify-content-between align-items-center gap-3">
+                      <button type="button" class="btn btn-outline-danger text-uppercase" data-bs-dismiss="modal"
+                        style="color: #f85559;">Close</button>
+                      <button type="button" class="btn btn-primary text-uppercase text-white border-0"
+                        style="background-color: #f85559;">Buy Now</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="card col shadow w-auto ">
+          <img src="./images/fruit7.png" class="card-img-top w-50 mx-auto p-3 my-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center my-2 fw-bold fs-3">10.50$ - 18.90$</h5>
+            <p class="card-text text-center">Orange</p>
+            <div class="my-4 text-center">
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3"></span>
+              <span class="fa fa-star fs-3"></span>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn text-uppercase btn-light w-100 mx-auto" style="color: #f85559;"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Details
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header flex-column">
+                    <div>
+                      <img src="./images/fruit7.png" class="card-img-top" alt="...">
+                    </div>
+                    <h5 class="modal-title" id="exampleModalLabel">Orange</h5>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis qui tenetur
+                      inventore.</p>
+                    <div class="d-flex justify-content-between align-items-center gap-3">
+                      <button type="button" class="btn btn-outline-danger text-uppercase" data-bs-dismiss="modal"
+                        style="color: #f85559;">Close</button>
+                      <button type="button" class="btn btn-primary text-uppercase text-white border-0"
+                        style="background-color: #f85559;">Buy Now</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="card col shadow w-auto">
+          <img src="./images/fruit8.png" class="card-img-top w-50 mx-auto p-3 my-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center my-2 fw-bold fs-3">10.50$ - 18.90$</h5>
+            <p class="card-text text-center">Red Dragon</p>
+            <div class="my-4 text-center">
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3"></span>
+              <span class="fa fa-star fs-3"></span>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn text-uppercase btn-light w-100 mx-auto" style="color: #f85559;"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Details
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header flex-column">
+                    <div>
+                      <img src="./images/fruit8.png" class="card-img-top" alt="...">
+                    </div>
+                    <h5 class="modal-title" id="exampleModalLabel">Red Dragon</h5>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis qui tenetur
+                      inventore.</p>
+                    <div class="d-flex justify-content-between align-items-center gap-3">
+                      <button type="button" class="btn btn-outline-danger text-uppercase" data-bs-dismiss="modal"
+                        style="color: #f85559;">Close</button>
+                      <button type="button" class="btn btn-primary text-uppercase text-white border-0"
+                        style="background-color: #f85559;">Buy Now</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 4 -->
+        <div class="card col shadow w-auto ">
+          <img src="./images/fruit9.png" class="card-img-top w-50 mx-auto p-3 my-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center my-2 fw-bold fs-3">10.50$ - 18.90$</h5>
+            <p class="card-text text-center">Banana</p>
+            <div class="my-4 text-center">
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3 checked" style="color: #f85559;"></span>
+              <span class="fa fa-star fs-3"></span>
+              <span class="fa fa-star fs-3"></span>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn text-uppercase btn-light w-100 mx-auto" style="color: #f85559;"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Details
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header flex-column">
+                    <div>
+                      <img src="./images/fruit9.png" class="card-img-top" alt="...">
+                    </div>
+                    <h5 class="modal-title" id="exampleModalLabel">Banana</h5>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis qui tenetur
+                      inventore.</p>
+                    <div class="d-flex justify-content-between align-items-center gap-3">
+                      <button type="button" class="btn btn-outline-danger text-uppercase" data-bs-dismiss="modal"
+                        style="color: #f85559;">Close</button>
+                      <button type="button" class="btn btn-primary text-uppercase text-white border-0"
+                        style="background-color: #f85559;">Buy Now</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- Card section end -->
+    <!-- Meet Team section start -->
+    <div class="container text-center my-5">
+      <button class="btn btn-danger fw-bold">Shop all</button>
+    </div>
+    <div class="mb-5 p-3">
+      <div class="container meet-section">
+        <div class="text-white text-center pt-5 mb-5">
+          <h1>Meet the team section</h1>
+          <p>Contrary to popular belief, is not simply random text. It has roots <br> in a piece of classical Latin
+            literature from 45 BC, making it over <br> 2000 years old.
+          </p>
+
+        </div>
+        <div class="d-flex gap-4 justify-content-center align-items-center pb-5 flex-lg-row flex-column">
+          <div class="text-white text-center">
+            <img src="./images/member1.png" alt="">
+            <h3>Awlad Hossain</h3>
+            <p>Fruits Expert</p>
+            <div>
+              <i class="fa-brands fa-facebook fs-4 p-2" style="color: #f85559;"></i>
+              <i class="fa-brands fa-twitter fs-4 p-2" style="color: #f85559;"></i>
+              <i class="fa-brands fa-linkedin fs-4 p-2" style="color: #f85559;"></i>
+            </div>
+          </div>
+          <div class="text-white text-center">
+            <img src="./images/member2.png" alt="">
+            <h3>Hasina Hossain</h3>
+            <p>Fruits Expert</p>
+            <div>
+              <i class="fa-brands fa-facebook fs-4 p-2" style="color: #f85559;"></i>
+              <i class="fa-brands fa-twitter fs-4 p-2" style="color: #f85559;"></i>
+              <i class="fa-brands fa-linkedin fs-4 p-2" style="color: #f85559;"></i>
+            </div>
+          </div>
+          <div class="text-white text-center">
+            <img src="./images/member3.png" alt="">
+            <h3>Khaled Hossain</h3>
+            <p>Fruits Expert</p>
+            <div>
+              <i class="fa-brands fa-facebook fs-4 p-2" style="color: #f85559;"></i>
+              <i class="fa-brands fa-twitter fs-4 p-2" style="color: #f85559;"></i>
+              <i class="fa-brands fa-linkedin fs-4 p-2" style="color: #f85559;"></i>
+            </div>
+          </div>
+          <div class="text-white text-center">
+            <img src="./images/member4.png" alt="">
+            <h3>Nusrat Nowrin
+            </h3>
+            <p>Fruits Expert</p>
+            <div>
+              <i class="fa-brands fa-facebook fs-4 p-2" style="color: #f85559;"></i>
+              <i class="fa-brands fa-twitter fs-4 p-2" style="color: #f85559;"></i>
+              <i class="fa-brands fa-linkedin fs-4 p-2" style="color: #f85559;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Meet Team section end -->
+    <!-- why choose us start -->
+    <div class="container my-5">
+      <div class="text-center">
+        <h1 class="fw-bold fs-1 p-2">Why Choose Us</h1>
+        <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin
+          <br>literature from 45 BC, making it over 2000 years old.
+        </p>
+      </div>
+      <div class="d-flex flex-lg-row flex-column justify-content-center gap-3 align-items-center">
+        <div>
+          <div
+            class="d-flex text-center text-lg-start flex-lg-row flex-column justify-content-center align-items-center gap-2">
+            <div>
+              <svg class="p-2 rounded-pill" xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                viewBox="0 0 24 24" fill="none" style="background-color: #CBD5E1; width: 80px; height: 50px;">
+                <path
+                  d="M20.52 9.16036C21.2025 8.49188 21.6 7.5787 21.6 6.6C21.6 4.61503 19.9852 3 18 3C17.3441 3 16.6988 3.18028 16.1332 3.52148C15.9442 3.63577 15.8832 3.88144 15.9973 4.07072C16.1113 4.26 16.3574 4.32033 16.5465 4.20666C16.9875 3.94064 17.4899 3.80002 18 3.80002C19.5437 3.80002 20.8 5.05608 20.8 6.6C20.8 7.55077 20.3238 8.42714 19.5246 8.94548C18.8535 9.38573 18.0027 9.51267 17.2258 9.29138C17.0156 9.23081 16.7922 9.35348 16.7312 9.56597C16.6707 9.77845 16.7937 9.99975 17.0062 10.0605C17.3297 10.1531 17.664 10.2 18 10.2C18.629 10.2 19.2369 10.0284 19.7767 9.71855C21.8301 10.4626 23.2 12.4013 23.2 14.6V16.6H19.5525C19.2692 13.9283 17.5884 11.5904 15.1367 10.4802C15.9169 9.68587 16.4 8.59875 16.4 7.40002C16.4 4.97381 14.4262 3 12 3C9.57384 3 7.59998 4.97381 7.59998 7.40002C7.59998 8.59913 8.08336 9.68658 8.86397 10.481C8.03887 10.8559 7.27364 11.3803 6.62461 12.0256C5.38041 13.2734 4.62328 14.8749 4.44356 16.6001H0.800016V14.6001C0.800016 13.2149 1.34105 11.9089 2.32191 10.9239C2.86186 10.3874 3.51923 9.97805 4.22705 9.7208C4.76691 10.0294 5.37305 10.2 6 10.2C6.33595 10.2 6.67031 10.1531 6.99375 10.0605C7.20623 9.9998 7.32928 9.7785 7.26876 9.56602C7.20783 9.35353 6.98437 9.23105 6.77423 9.29142C5.99766 9.51309 5.1473 9.38634 4.47347 8.94455C3.67622 8.42714 3.20002 7.55081 3.20002 6.6C3.20002 5.05608 4.45627 3.80002 6 3.80002C6.51014 3.80002 7.0125 3.94064 7.4535 4.20666C7.64334 4.32033 7.88827 4.25939 8.00273 4.07072C8.11678 3.88148 8.05584 3.63577 7.8668 3.52148C7.30116 3.18028 6.65587 3 6 3C4.01484 3 2.4 4.61503 2.4 6.6C2.4 7.57795 2.7968 8.49042 3.47737 9.1583C2.84302 9.45319 2.25712 9.8603 1.75627 10.3578C0.623812 11.4953 0 13.0018 0 14.6V17C0 17.2209 0.178922 17.4 0.399984 17.4H4.39997V20.6C4.39997 20.8209 4.57889 21 4.79995 21H19.2C19.4211 21 19.5999 20.8209 19.5999 20.6V17.4H23.5999C23.821 17.4 23.9999 17.2209 23.9999 17V14.6C24 12.2349 22.6255 10.131 20.52 9.16036ZM8.4 7.40002C8.4 5.41505 10.0148 3.80002 12 3.80002C13.9852 3.80002 15.6 5.41505 15.6 7.40002C15.6 9.38498 13.9852 11 12 11C10.0148 11 8.4 9.38494 8.4 7.40002ZM18.8 20.2H5.19998V17.4C5.19998 15.5863 5.907 13.8783 7.18983 12.5916C7.86562 11.9194 8.68491 11.398 9.5633 11.0607C10.2615 11.527 11.0992 11.8 12 11.8C12.9022 11.8 13.7415 11.5262 14.4403 11.0585C17.0549 12.0631 18.8 14.5838 18.8 17.4V20.2Z"
+                  fill="#121212"></path>
+              </svg>
+            </div>
+            <div>
+              <h2>Dedicated Team</h2>
+              <hr class="border-2 mx-auto mx-lg-0" style="width: 30%;">
+              <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+            </div>
+          </div>
+          <div
+            class="d-flex text-center text-lg-start flex-lg-row flex-column justify-content-center align-items-center gap-2">
+            <div>
+              <svg class="p-2 rounded-pill" xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                viewBox="0 0 24 24" fill="none" style="background-color: #CBD5E1; width: 80px; height: 50px;">
+                <path
+                  d="M20.52 9.16036C21.2025 8.49188 21.6 7.5787 21.6 6.6C21.6 4.61503 19.9852 3 18 3C17.3441 3 16.6988 3.18028 16.1332 3.52148C15.9442 3.63577 15.8832 3.88144 15.9973 4.07072C16.1113 4.26 16.3574 4.32033 16.5465 4.20666C16.9875 3.94064 17.4899 3.80002 18 3.80002C19.5437 3.80002 20.8 5.05608 20.8 6.6C20.8 7.55077 20.3238 8.42714 19.5246 8.94548C18.8535 9.38573 18.0027 9.51267 17.2258 9.29138C17.0156 9.23081 16.7922 9.35348 16.7312 9.56597C16.6707 9.77845 16.7937 9.99975 17.0062 10.0605C17.3297 10.1531 17.664 10.2 18 10.2C18.629 10.2 19.2369 10.0284 19.7767 9.71855C21.8301 10.4626 23.2 12.4013 23.2 14.6V16.6H19.5525C19.2692 13.9283 17.5884 11.5904 15.1367 10.4802C15.9169 9.68587 16.4 8.59875 16.4 7.40002C16.4 4.97381 14.4262 3 12 3C9.57384 3 7.59998 4.97381 7.59998 7.40002C7.59998 8.59913 8.08336 9.68658 8.86397 10.481C8.03887 10.8559 7.27364 11.3803 6.62461 12.0256C5.38041 13.2734 4.62328 14.8749 4.44356 16.6001H0.800016V14.6001C0.800016 13.2149 1.34105 11.9089 2.32191 10.9239C2.86186 10.3874 3.51923 9.97805 4.22705 9.7208C4.76691 10.0294 5.37305 10.2 6 10.2C6.33595 10.2 6.67031 10.1531 6.99375 10.0605C7.20623 9.9998 7.32928 9.7785 7.26876 9.56602C7.20783 9.35353 6.98437 9.23105 6.77423 9.29142C5.99766 9.51309 5.1473 9.38634 4.47347 8.94455C3.67622 8.42714 3.20002 7.55081 3.20002 6.6C3.20002 5.05608 4.45627 3.80002 6 3.80002C6.51014 3.80002 7.0125 3.94064 7.4535 4.20666C7.64334 4.32033 7.88827 4.25939 8.00273 4.07072C8.11678 3.88148 8.05584 3.63577 7.8668 3.52148C7.30116 3.18028 6.65587 3 6 3C4.01484 3 2.4 4.61503 2.4 6.6C2.4 7.57795 2.7968 8.49042 3.47737 9.1583C2.84302 9.45319 2.25712 9.8603 1.75627 10.3578C0.623812 11.4953 0 13.0018 0 14.6V17C0 17.2209 0.178922 17.4 0.399984 17.4H4.39997V20.6C4.39997 20.8209 4.57889 21 4.79995 21H19.2C19.4211 21 19.5999 20.8209 19.5999 20.6V17.4H23.5999C23.821 17.4 23.9999 17.2209 23.9999 17V14.6C24 12.2349 22.6255 10.131 20.52 9.16036ZM8.4 7.40002C8.4 5.41505 10.0148 3.80002 12 3.80002C13.9852 3.80002 15.6 5.41505 15.6 7.40002C15.6 9.38498 13.9852 11 12 11C10.0148 11 8.4 9.38494 8.4 7.40002ZM18.8 20.2H5.19998V17.4C5.19998 15.5863 5.907 13.8783 7.18983 12.5916C7.86562 11.9194 8.68491 11.398 9.5633 11.0607C10.2615 11.527 11.0992 11.8 12 11.8C12.9022 11.8 13.7415 11.5262 14.4403 11.0585C17.0549 12.0631 18.8 14.5838 18.8 17.4V20.2Z"
+                  fill="#121212"></path>
+              </svg>
+            </div>
+            <div>
+              <h2>Dedicated Team</h2>
+              <hr class="border-2 mx-auto mx-lg-0" style="width: 30%;">
+              <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+            </div>
+          </div>
+          <div
+            class="d-flex text-center text-lg-start flex-lg-row flex-column justify-content-center align-items-center gap-2">
+            <div>
+              <svg class="p-2 rounded-pill" xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                viewBox="0 0 24 24" fill="none" style="background-color: #CBD5E1; width: 80px; height: 50px;">
+                <path
+                  d="M20.52 9.16036C21.2025 8.49188 21.6 7.5787 21.6 6.6C21.6 4.61503 19.9852 3 18 3C17.3441 3 16.6988 3.18028 16.1332 3.52148C15.9442 3.63577 15.8832 3.88144 15.9973 4.07072C16.1113 4.26 16.3574 4.32033 16.5465 4.20666C16.9875 3.94064 17.4899 3.80002 18 3.80002C19.5437 3.80002 20.8 5.05608 20.8 6.6C20.8 7.55077 20.3238 8.42714 19.5246 8.94548C18.8535 9.38573 18.0027 9.51267 17.2258 9.29138C17.0156 9.23081 16.7922 9.35348 16.7312 9.56597C16.6707 9.77845 16.7937 9.99975 17.0062 10.0605C17.3297 10.1531 17.664 10.2 18 10.2C18.629 10.2 19.2369 10.0284 19.7767 9.71855C21.8301 10.4626 23.2 12.4013 23.2 14.6V16.6H19.5525C19.2692 13.9283 17.5884 11.5904 15.1367 10.4802C15.9169 9.68587 16.4 8.59875 16.4 7.40002C16.4 4.97381 14.4262 3 12 3C9.57384 3 7.59998 4.97381 7.59998 7.40002C7.59998 8.59913 8.08336 9.68658 8.86397 10.481C8.03887 10.8559 7.27364 11.3803 6.62461 12.0256C5.38041 13.2734 4.62328 14.8749 4.44356 16.6001H0.800016V14.6001C0.800016 13.2149 1.34105 11.9089 2.32191 10.9239C2.86186 10.3874 3.51923 9.97805 4.22705 9.7208C4.76691 10.0294 5.37305 10.2 6 10.2C6.33595 10.2 6.67031 10.1531 6.99375 10.0605C7.20623 9.9998 7.32928 9.7785 7.26876 9.56602C7.20783 9.35353 6.98437 9.23105 6.77423 9.29142C5.99766 9.51309 5.1473 9.38634 4.47347 8.94455C3.67622 8.42714 3.20002 7.55081 3.20002 6.6C3.20002 5.05608 4.45627 3.80002 6 3.80002C6.51014 3.80002 7.0125 3.94064 7.4535 4.20666C7.64334 4.32033 7.88827 4.25939 8.00273 4.07072C8.11678 3.88148 8.05584 3.63577 7.8668 3.52148C7.30116 3.18028 6.65587 3 6 3C4.01484 3 2.4 4.61503 2.4 6.6C2.4 7.57795 2.7968 8.49042 3.47737 9.1583C2.84302 9.45319 2.25712 9.8603 1.75627 10.3578C0.623812 11.4953 0 13.0018 0 14.6V17C0 17.2209 0.178922 17.4 0.399984 17.4H4.39997V20.6C4.39997 20.8209 4.57889 21 4.79995 21H19.2C19.4211 21 19.5999 20.8209 19.5999 20.6V17.4H23.5999C23.821 17.4 23.9999 17.2209 23.9999 17V14.6C24 12.2349 22.6255 10.131 20.52 9.16036ZM8.4 7.40002C8.4 5.41505 10.0148 3.80002 12 3.80002C13.9852 3.80002 15.6 5.41505 15.6 7.40002C15.6 9.38498 13.9852 11 12 11C10.0148 11 8.4 9.38494 8.4 7.40002ZM18.8 20.2H5.19998V17.4C5.19998 15.5863 5.907 13.8783 7.18983 12.5916C7.86562 11.9194 8.68491 11.398 9.5633 11.0607C10.2615 11.527 11.0992 11.8 12 11.8C12.9022 11.8 13.7415 11.5262 14.4403 11.0585C17.0549 12.0631 18.8 14.5838 18.8 17.4V20.2Z"
+                  fill="#121212"></path>
+              </svg>
+            </div>
+            <div>
+              <h2>Dedicated Team</h2>
+              <hr class="border-2 mx-auto mx-lg-0" style="width: 30%;">
+              <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+            </div>
+          </div>
+        </div>
+        <div class="order-first order-lg-0 ">
+          <img class="why-img" src="./images/whychoose1.png" alt="">
+        </div>
+        <div>
+          <div
+            class="d-flex text-center text-lg-end flex-lg-row flex-column-reverse justify-content-center align-items-center gap-2">
+            <div>
+              <h2>Dedicated Team</h2>
+              <div class="d-flex justify-content-lg-end justify-content-center">
+                <hr class="border-2" style="width: 30%;">
+              </div>
+              <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+            </div>
+            <div>
+              <svg class="p-2 rounded-pill" style="background-color: #CBD5E1; width: 80px; height: 50px;"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20.52 9.16036C21.2025 8.49188 21.6 7.5787 21.6 6.6C21.6 4.61503 19.9852 3 18 3C17.3441 3 16.6988 3.18028 16.1332 3.52148C15.9442 3.63577 15.8832 3.88144 15.9973 4.07072C16.1113 4.26 16.3574 4.32033 16.5465 4.20666C16.9875 3.94064 17.4899 3.80002 18 3.80002C19.5437 3.80002 20.8 5.05608 20.8 6.6C20.8 7.55077 20.3238 8.42714 19.5246 8.94548C18.8535 9.38573 18.0027 9.51267 17.2258 9.29138C17.0156 9.23081 16.7922 9.35348 16.7312 9.56597C16.6707 9.77845 16.7937 9.99975 17.0062 10.0605C17.3297 10.1531 17.664 10.2 18 10.2C18.629 10.2 19.2369 10.0284 19.7767 9.71855C21.8301 10.4626 23.2 12.4013 23.2 14.6V16.6H19.5525C19.2692 13.9283 17.5884 11.5904 15.1367 10.4802C15.9169 9.68587 16.4 8.59875 16.4 7.40002C16.4 4.97381 14.4262 3 12 3C9.57384 3 7.59998 4.97381 7.59998 7.40002C7.59998 8.59913 8.08336 9.68658 8.86397 10.481C8.03887 10.8559 7.27364 11.3803 6.62461 12.0256C5.38041 13.2734 4.62328 14.8749 4.44356 16.6001H0.800016V14.6001C0.800016 13.2149 1.34105 11.9089 2.32191 10.9239C2.86186 10.3874 3.51923 9.97805 4.22705 9.7208C4.76691 10.0294 5.37305 10.2 6 10.2C6.33595 10.2 6.67031 10.1531 6.99375 10.0605C7.20623 9.9998 7.32928 9.7785 7.26876 9.56602C7.20783 9.35353 6.98437 9.23105 6.77423 9.29142C5.99766 9.51309 5.1473 9.38634 4.47347 8.94455C3.67622 8.42714 3.20002 7.55081 3.20002 6.6C3.20002 5.05608 4.45627 3.80002 6 3.80002C6.51014 3.80002 7.0125 3.94064 7.4535 4.20666C7.64334 4.32033 7.88827 4.25939 8.00273 4.07072C8.11678 3.88148 8.05584 3.63577 7.8668 3.52148C7.30116 3.18028 6.65587 3 6 3C4.01484 3 2.4 4.61503 2.4 6.6C2.4 7.57795 2.7968 8.49042 3.47737 9.1583C2.84302 9.45319 2.25712 9.8603 1.75627 10.3578C0.623812 11.4953 0 13.0018 0 14.6V17C0 17.2209 0.178922 17.4 0.399984 17.4H4.39997V20.6C4.39997 20.8209 4.57889 21 4.79995 21H19.2C19.4211 21 19.5999 20.8209 19.5999 20.6V17.4H23.5999C23.821 17.4 23.9999 17.2209 23.9999 17V14.6C24 12.2349 22.6255 10.131 20.52 9.16036ZM8.4 7.40002C8.4 5.41505 10.0148 3.80002 12 3.80002C13.9852 3.80002 15.6 5.41505 15.6 7.40002C15.6 9.38498 13.9852 11 12 11C10.0148 11 8.4 9.38494 8.4 7.40002ZM18.8 20.2H5.19998V17.4C5.19998 15.5863 5.907 13.8783 7.18983 12.5916C7.86562 11.9194 8.68491 11.398 9.5633 11.0607C10.2615 11.527 11.0992 11.8 12 11.8C12.9022 11.8 13.7415 11.5262 14.4403 11.0585C17.0549 12.0631 18.8 14.5838 18.8 17.4V20.2Z"
+                  fill="#121212"></path>
+              </svg>
+            </div>
+          </div>
+          <div
+            class="d-flex text-center text-lg-end flex-lg-row flex-column-reverse justify-content-center align-items-center gap-2">
+            <div>
+              <h2>Dedicated Team</h2>
+              <div class="d-flex justify-content-lg-end justify-content-center">
+                <hr class="border-2" style="width: 30%;">
+              </div>
+              <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+            </div>
+            <div>
+              <svg class="p-2 rounded-pill" style="background-color: #CBD5E1; width: 80px; height: 50px;"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20.52 9.16036C21.2025 8.49188 21.6 7.5787 21.6 6.6C21.6 4.61503 19.9852 3 18 3C17.3441 3 16.6988 3.18028 16.1332 3.52148C15.9442 3.63577 15.8832 3.88144 15.9973 4.07072C16.1113 4.26 16.3574 4.32033 16.5465 4.20666C16.9875 3.94064 17.4899 3.80002 18 3.80002C19.5437 3.80002 20.8 5.05608 20.8 6.6C20.8 7.55077 20.3238 8.42714 19.5246 8.94548C18.8535 9.38573 18.0027 9.51267 17.2258 9.29138C17.0156 9.23081 16.7922 9.35348 16.7312 9.56597C16.6707 9.77845 16.7937 9.99975 17.0062 10.0605C17.3297 10.1531 17.664 10.2 18 10.2C18.629 10.2 19.2369 10.0284 19.7767 9.71855C21.8301 10.4626 23.2 12.4013 23.2 14.6V16.6H19.5525C19.2692 13.9283 17.5884 11.5904 15.1367 10.4802C15.9169 9.68587 16.4 8.59875 16.4 7.40002C16.4 4.97381 14.4262 3 12 3C9.57384 3 7.59998 4.97381 7.59998 7.40002C7.59998 8.59913 8.08336 9.68658 8.86397 10.481C8.03887 10.8559 7.27364 11.3803 6.62461 12.0256C5.38041 13.2734 4.62328 14.8749 4.44356 16.6001H0.800016V14.6001C0.800016 13.2149 1.34105 11.9089 2.32191 10.9239C2.86186 10.3874 3.51923 9.97805 4.22705 9.7208C4.76691 10.0294 5.37305 10.2 6 10.2C6.33595 10.2 6.67031 10.1531 6.99375 10.0605C7.20623 9.9998 7.32928 9.7785 7.26876 9.56602C7.20783 9.35353 6.98437 9.23105 6.77423 9.29142C5.99766 9.51309 5.1473 9.38634 4.47347 8.94455C3.67622 8.42714 3.20002 7.55081 3.20002 6.6C3.20002 5.05608 4.45627 3.80002 6 3.80002C6.51014 3.80002 7.0125 3.94064 7.4535 4.20666C7.64334 4.32033 7.88827 4.25939 8.00273 4.07072C8.11678 3.88148 8.05584 3.63577 7.8668 3.52148C7.30116 3.18028 6.65587 3 6 3C4.01484 3 2.4 4.61503 2.4 6.6C2.4 7.57795 2.7968 8.49042 3.47737 9.1583C2.84302 9.45319 2.25712 9.8603 1.75627 10.3578C0.623812 11.4953 0 13.0018 0 14.6V17C0 17.2209 0.178922 17.4 0.399984 17.4H4.39997V20.6C4.39997 20.8209 4.57889 21 4.79995 21H19.2C19.4211 21 19.5999 20.8209 19.5999 20.6V17.4H23.5999C23.821 17.4 23.9999 17.2209 23.9999 17V14.6C24 12.2349 22.6255 10.131 20.52 9.16036ZM8.4 7.40002C8.4 5.41505 10.0148 3.80002 12 3.80002C13.9852 3.80002 15.6 5.41505 15.6 7.40002C15.6 9.38498 13.9852 11 12 11C10.0148 11 8.4 9.38494 8.4 7.40002ZM18.8 20.2H5.19998V17.4C5.19998 15.5863 5.907 13.8783 7.18983 12.5916C7.86562 11.9194 8.68491 11.398 9.5633 11.0607C10.2615 11.527 11.0992 11.8 12 11.8C12.9022 11.8 13.7415 11.5262 14.4403 11.0585C17.0549 12.0631 18.8 14.5838 18.8 17.4V20.2Z"
+                  fill="#121212"></path>
+              </svg>
+            </div>
+          </div>
+          <div
+            class="d-flex text-center text-lg-end flex-lg-row flex-column-reverse justify-content-center align-items-center gap-2">
+            <div>
+              <h2>Dedicated Team</h2>
+              <div class="d-flex justify-content-lg-end justify-content-center">
+                <hr class="border-2" style="width: 30%;">
+              </div>
+              <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+            </div>
+            <div>
+              <svg class="p-2 rounded-pill" style="background-color: #CBD5E1; width: 80px; height: 50px;"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20.52 9.16036C21.2025 8.49188 21.6 7.5787 21.6 6.6C21.6 4.61503 19.9852 3 18 3C17.3441 3 16.6988 3.18028 16.1332 3.52148C15.9442 3.63577 15.8832 3.88144 15.9973 4.07072C16.1113 4.26 16.3574 4.32033 16.5465 4.20666C16.9875 3.94064 17.4899 3.80002 18 3.80002C19.5437 3.80002 20.8 5.05608 20.8 6.6C20.8 7.55077 20.3238 8.42714 19.5246 8.94548C18.8535 9.38573 18.0027 9.51267 17.2258 9.29138C17.0156 9.23081 16.7922 9.35348 16.7312 9.56597C16.6707 9.77845 16.7937 9.99975 17.0062 10.0605C17.3297 10.1531 17.664 10.2 18 10.2C18.629 10.2 19.2369 10.0284 19.7767 9.71855C21.8301 10.4626 23.2 12.4013 23.2 14.6V16.6H19.5525C19.2692 13.9283 17.5884 11.5904 15.1367 10.4802C15.9169 9.68587 16.4 8.59875 16.4 7.40002C16.4 4.97381 14.4262 3 12 3C9.57384 3 7.59998 4.97381 7.59998 7.40002C7.59998 8.59913 8.08336 9.68658 8.86397 10.481C8.03887 10.8559 7.27364 11.3803 6.62461 12.0256C5.38041 13.2734 4.62328 14.8749 4.44356 16.6001H0.800016V14.6001C0.800016 13.2149 1.34105 11.9089 2.32191 10.9239C2.86186 10.3874 3.51923 9.97805 4.22705 9.7208C4.76691 10.0294 5.37305 10.2 6 10.2C6.33595 10.2 6.67031 10.1531 6.99375 10.0605C7.20623 9.9998 7.32928 9.7785 7.26876 9.56602C7.20783 9.35353 6.98437 9.23105 6.77423 9.29142C5.99766 9.51309 5.1473 9.38634 4.47347 8.94455C3.67622 8.42714 3.20002 7.55081 3.20002 6.6C3.20002 5.05608 4.45627 3.80002 6 3.80002C6.51014 3.80002 7.0125 3.94064 7.4535 4.20666C7.64334 4.32033 7.88827 4.25939 8.00273 4.07072C8.11678 3.88148 8.05584 3.63577 7.8668 3.52148C7.30116 3.18028 6.65587 3 6 3C4.01484 3 2.4 4.61503 2.4 6.6C2.4 7.57795 2.7968 8.49042 3.47737 9.1583C2.84302 9.45319 2.25712 9.8603 1.75627 10.3578C0.623812 11.4953 0 13.0018 0 14.6V17C0 17.2209 0.178922 17.4 0.399984 17.4H4.39997V20.6C4.39997 20.8209 4.57889 21 4.79995 21H19.2C19.4211 21 19.5999 20.8209 19.5999 20.6V17.4H23.5999C23.821 17.4 23.9999 17.2209 23.9999 17V14.6C24 12.2349 22.6255 10.131 20.52 9.16036ZM8.4 7.40002C8.4 5.41505 10.0148 3.80002 12 3.80002C13.9852 3.80002 15.6 5.41505 15.6 7.40002C15.6 9.38498 13.9852 11 12 11C10.0148 11 8.4 9.38494 8.4 7.40002ZM18.8 20.2H5.19998V17.4C5.19998 15.5863 5.907 13.8783 7.18983 12.5916C7.86562 11.9194 8.68491 11.398 9.5633 11.0607C10.2615 11.527 11.0992 11.8 12 11.8C12.9022 11.8 13.7415 11.5262 14.4403 11.0585C17.0549 12.0631 18.8 14.5838 18.8 17.4V20.2Z"
+                  fill="#121212"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- why choose us end -->
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
